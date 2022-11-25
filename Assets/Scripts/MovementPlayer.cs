@@ -11,7 +11,7 @@ public class MovementPlayer : MonoBehaviour
        rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         ProcessThrust();
         ProcessRotation();

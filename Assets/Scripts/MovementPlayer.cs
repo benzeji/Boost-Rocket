@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
-    void Update()
+    private Rigidbody rigidBody;
+    [SerializeField] private float mainThrust = 5f;
+    [SerializeField] private float rotationThrust = 1f;
+
+    private void Start()
+    {
+       rigidBody = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
     {
         ProcessThrust();
         ProcessRotation();
@@ -12,7 +21,7 @@ public class MovementPlayer : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Debug.Log("Pressed SPACE");
+            rigidBody.AddRelativeForce(mainThrust * Time.deltaTime * Vector3.up);
         }
     }
 
@@ -20,12 +29,18 @@ public class MovementPlayer : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("Pressed Left");
+            ApplyRotation(rotationThrust);
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("Pressed Right");
+            ApplyRotation(-rotationThrust);
         }
     }
+
+    private void ApplyRotation(float rotationThisFrame)
+    {
+        transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);
+    }
+    
 }

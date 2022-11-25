@@ -42,5 +42,4 @@ public class MovementPlayer : MonoBehaviour
     {
         transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);
     }
-    
 }

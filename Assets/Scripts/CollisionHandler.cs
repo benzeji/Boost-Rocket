@@ -27,6 +27,6 @@ public class CollisionHandler : MonoBehaviour
 
     private void ReloadLevel()
     {
-        SceneManager.LoadScene("SandBox", LoadSceneMode.Additive);
+        SceneManager.LoadScene(0);
     }
 }

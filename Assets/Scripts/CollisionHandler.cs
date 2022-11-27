@@ -10,8 +10,8 @@ public class CollisionHandler : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "Friendly":
-                Debug.Log("This thing is Frendly");
+            case "Start":
+                Debug.Log("This thing is Start");
                 break;
             case "Finish":
                 Debug.Log("This thing is Finish");

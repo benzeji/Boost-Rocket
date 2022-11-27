@@ -605,6 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 1000
   rotationThrust: 100
+  incrementPitch: 0.1
 --- !u!23 &522863309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -681,7 +682,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 03a2626b6b7c02045860754fcdcbc2b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ba00a70a95f166f43a06bacb3a834fcc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

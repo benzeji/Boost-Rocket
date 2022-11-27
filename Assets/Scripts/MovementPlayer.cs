@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
-    private Rigidbody rigidBody;
     [SerializeField] private float mainThrust = 5f;
     [SerializeField] private float rotationThrust = 1f;
+    [SerializeField] private float incrementPitch = 0.1f;
+    private float targetPitch;
+    private Rigidbody rigidBody;
+    private AudioSource audioSource;
 
     private void Start()
     {
        rigidBody = GetComponent<Rigidbody>();
+       audioSource = GetComponent<AudioSource>();
+       audioSource.Play();
     }
 
     private void FixedUpdate()
@@ -17,14 +22,24 @@ public class MovementPlayer : MonoBehaviour
         ProcessRotation();
     }
 
+    // Traction treatment
+
     private void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(mainThrust * Time.deltaTime * Vector3.up);
+            targetPitch = 3f;
         }
-    }
 
+        else
+        {
+            targetPitch = 0f;
+        }
+        
+        audioSource.pitch = Mathf.Lerp(audioSource.pitch, targetPitch, incrementPitch * Time.deltaTime);
+    }
+    
     private void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.A))
@@ -40,8 +55,6 @@ public class MovementPlayer : MonoBehaviour
 
     private void ApplyRotation(float rotationThisFrame)
     {
-        rigidBody.freezeRotation = true; // freezing rotation so we can manually rotate
         transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);
-        rigidBody.freezeRotation = false; // unfreezing rotation so the physics system can take over 
     }
 }

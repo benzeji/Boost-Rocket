@@ -814,6 +814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435525e3e662a9342b05461f4f913c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 3
+  finishClip: {fileID: 8300000, guid: d69c603a5aa0196489b83bdc3c9ae420, type: 3}
+  crashClip: {fileID: 8300000, guid: 6869cbd26d89614429c8d6c81a3c649b, type: 3}
 --- !u!4 &544243162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3698492773016837768, guid: 8d0c2a9fbef2c064688658d0520847f4, type: 3}

@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/d0/70e2e3c5/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FpsCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,6 +76,9 @@
       <workItem from="1669424319056" duration="1329000" />
       <workItem from="1669507798417" duration="8834000" />
       <workItem from="1669602421646" duration="1394000" />
+      <workItem from="1669680797558" duration="3000" />
+      <workItem from="1669693853470" duration="2748000" />
+      <workItem from="1669772162092" duration="5115000" />
     </task>
     <servers />
   </component>

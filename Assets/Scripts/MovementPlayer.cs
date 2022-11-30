@@ -5,6 +5,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float mainThrust = 5f;
     [SerializeField] private float rotationThrust = 1f;
     [SerializeField] private float incrementPitch = 0.1f;
+
     private float targetPitch;
     private Rigidbody rigidBody;
     private AudioSource audioSource;
@@ -21,9 +22,7 @@ public class MovementPlayer : MonoBehaviour
         ProcessThrust();
         ProcessRotation();
     }
-
-    // Traction treatment
-
+    
     private void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))

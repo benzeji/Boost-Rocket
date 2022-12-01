@@ -37,20 +37,20 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartSuccessSequence()
     {
-        finishParticle.Play();
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(finishClip);
+        finishParticle.Play();
         GetComponent<MovementPlayer>().enabled = false;
         Invoke(nameof(LoadNextLevel), levelLoadDelay);
     }
     
     private void StartCrashSequence()
     {
-        crashParticle.Play();
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(crashClip);
+        crashParticle.Play();
         GetComponent<MovementPlayer>().enabled = false;
         Invoke(nameof(ReloadLevel), levelLoadDelay);
     }

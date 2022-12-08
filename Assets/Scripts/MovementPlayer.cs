@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
-    [SerializeField] private float mainThrust = 5f;
+    [SerializeField] private float mainThrust = 100f;
     [SerializeField] private float rotationThrust = 1f;
-    [SerializeField] private float incrementPitch = 0.1f;
-
-    private float targetPitch;
+    [SerializeField] private AudioClip mainEngine;
+    [SerializeField] private ParticleSystem mainEngineParticle;
+     
     private Rigidbody rigidBody;
     private AudioSource audioSource;
 
@@ -14,7 +14,6 @@ public class MovementPlayer : MonoBehaviour
     {
        rigidBody = GetComponent<Rigidbody>();
        audioSource = GetComponent<AudioSource>();
-       audioSource.Play();
     }
 
     private void FixedUpdate()
@@ -27,31 +26,56 @@ public class MovementPlayer : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(mainThrust * Time.deltaTime * Vector3.up);
-            targetPitch = 3f;
+            StartThrusting();
         }
-
         else
         {
-            targetPitch = 0f;
+            StopThrusting();
         }
-        
-        audioSource.pitch = Mathf.Lerp(audioSource.pitch, targetPitch, incrementPitch * Time.deltaTime);
     }
     
+    private void StartThrusting()
+    {
+        rigidBody.AddRelativeForce(mainThrust * Time.deltaTime * Vector3.up);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+
+        if (!mainEngineParticle.isPlaying)
+        {
+            mainEngineParticle.Play();
+        }
+    }
+    
+    private void StopThrusting()
+    {
+        audioSource.Stop();
+        mainEngineParticle.Stop();
+    }
+
     private void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotationThrust);
+            RotateLeft();
         }
-
         else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotationThrust);
+            RotateRight();
         }
     }
+    
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationThrust);
+    }
 
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationThrust);
+    }
+    
     private void ApplyRotation(float rotationThisFrame)
     {
         transform.Rotate(rotationThisFrame * Time.deltaTime * Vector3.forward);

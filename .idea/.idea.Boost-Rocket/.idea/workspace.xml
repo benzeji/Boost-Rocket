@@ -32,7 +32,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\PC-2651\Documents\GitHub\Boost-Rocket -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\PC-2651\Documents\GitHub\Boost-Rocket" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -80,7 +80,9 @@
       <workItem from="1669693853470" duration="2748000" />
       <workItem from="1669772162092" duration="5115000" />
       <workItem from="1669817667223" duration="227000" />
-      <workItem from="1669902537031" duration="3379000" />
+      <workItem from="1669902537031" duration="3722000" />
+      <workItem from="1670356911253" duration="1191000" />
+      <workItem from="1670533405880" duration="4222000" />
     </task>
     <servers />
   </component>

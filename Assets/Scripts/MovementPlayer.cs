@@ -6,7 +6,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float rotationThrust = 1f;
     [SerializeField] private AudioClip mainEngine;
     [SerializeField] private ParticleSystem mainEngineParticle;
-     
+
     private Rigidbody rigidBody;
     private AudioSource audioSource;
 

@@ -3,18 +3,16 @@ using UnityEngine;
 
 public class FpsCounter : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _fpsText;
-    [SerializeField] private float _hudRefreshRate = 1f;
+    [SerializeField] private TMP_Text fpsText;
+    [SerializeField] private float hudRefreshRate = 1f;
  
-    private float _timer;
+    private float timer;
  
     private void Update()
     {
-        if (Time.unscaledTime > _timer)
-        {
-            int fps = (int)(1f / Time.unscaledDeltaTime);
-            _fpsText.text = "FPS: " + fps;
-            _timer = Time.unscaledTime + _hudRefreshRate;
-        }
+        if (!(Time.unscaledTime > timer)) return;
+        var fps = (int)(1f / Time.unscaledDeltaTime);
+        fpsText.text = "FPS: " + fps;
+        timer = Time.unscaledTime + hudRefreshRate;
     }
 }

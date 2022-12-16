@@ -10,7 +10,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/d0/70e2e3c5/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FpsCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -20,26 +19,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\PC-2651\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PC-2651\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PC-2651\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\PC-2651\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\PC-2651\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\PC-2651\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\PC-2651\Documents\GitHub\Boost-Rocket -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\PC-2651\Documents\GitHub\Boost-Rocket" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -47,7 +46,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\PC-2651\Documents\GitHub\Boost-Rocket -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\PC-2651\Documents\GitHub\Boost-Rocket" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -105,6 +104,23 @@
       <workItem from="1670791914636" duration="329000" />
       <workItem from="1670792280205" duration="52000" />
       <workItem from="1670792340779" duration="5654000" />
+      <workItem from="1670887226615" duration="839000" />
+      <workItem from="1670970997936" duration="10000" />
+      <workItem from="1670972416978" duration="1070000" />
+      <workItem from="1670975005912" duration="14000" />
+      <workItem from="1670975163731" duration="1328000" />
+      <workItem from="1670978387323" duration="341000" />
+      <workItem from="1670980397325" duration="358000" />
+      <workItem from="1671137294011" duration="1732000" />
+      <workItem from="1671139086670" duration="597000" />
+      <workItem from="1671143304915" duration="74000" />
+      <workItem from="1671143795890" duration="68000" />
+      <workItem from="1671143873613" duration="72000" />
+      <workItem from="1671145620516" duration="101000" />
+      <workItem from="1671146005359" duration="1384000" />
+      <workItem from="1671147656666" duration="1899000" />
+      <workItem from="1671153411270" duration="878000" />
+      <workItem from="1671160262559" duration="569000" />
     </task>
     <servers />
   </component>

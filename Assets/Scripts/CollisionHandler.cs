@@ -18,23 +18,6 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        RespondToDebugKeys();
-    }
-
-    private void RespondToDebugKeys()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadNextLevel();
-        }
-        else if (Input.GetKeyDown(KeyCode.C))
-        {
-            collisionDisable = !collisionDisable;
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (isTransitioning || collisionDisable) { return; }
@@ -73,7 +56,7 @@ public class CollisionHandler : MonoBehaviour
         Invoke(nameof(ReloadLevel), levelLoadDelay);
     }
     
-    private void LoadNextLevel()
+    public void LoadNextLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         var nextSceneIndex = currentSceneIndex + 1;
@@ -86,7 +69,7 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(nextSceneIndex);
     }
     
-    private void ReloadLevel()
+    public void ReloadLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
